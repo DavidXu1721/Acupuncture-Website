@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>St Helens Acupuncture and Chinese Medical Clinic</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chinese Acupuncture Page">
+    <meta name="keywords" content="Chinese, Acupuncture, needles, cupping, massage, appointment">
+    <meta name="author" content="David Xu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+    rel="stylesheet"
+    >
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
+    <script>
+      /*
+      window.onload = function() {
+        document.getElementById("change").innerHTML = "";
+      };
+      */
+    </script>
+  </head>
+  <body>
+    <!-- This is the navigation system-->
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="therapies.html">Therapies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li class="selectedPage"><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+    
+    <!-- This is the Header Section-->
+    <div class="header">
+      <img class="yinYangImg" src="images/yin-and-yang.png">
+      <h1>St Helens Acupuncture & Chinese Medical Clinic</h1>
+      <button class="shrink-border" onclick="location.href='qi_gong.html'">Learn more about Medical QiGong</button>
+    </div>
+
+    <!--This is the about us Section-->
+    <main>
+      <div class="two-column-container">
+        <div class="column">
+          <img id="myImage" src="images/About-Us_Lily_and_Peter.jpg" alt="Practitioners Lily and Peter"> 
+          <!-- This is just some test codes
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var image =document.getElementById("myImage");
+
+              //Change image source on "Enter" key press
+
+              document.addEventListener("keydown", function (event) {
+                if (event.key === "Enter") {
+                  image.src = "images/gallery/gallery1.jpg";
+                }
+              });
+            });
+          </script> -->
+        </div>
+        <div class="column">
+          <section class="about-section">
+            <h2>About Us</h2>
+            <p>
+              Dr Lily and Dr Peter graduated from the most famous Nanjing University of Traditional Chinese Medicine.
+            </p>
+            <p>
+              Both practitioners have a Masters Degree after 8 years of training in both Western Medicine & Traditional Chinese Medicine. Dr Lily and Dr Peter also have over 25 years of clinical experience. The practitioners at our clinic are exceptional when faced with difficult problems requiring specialist skills, and both can speak very good English alongside developing an exceptional reputation over the years. 
+            </p>
+            <p> 
+              Dr. Lily and Dr. Peter are highly skilled in the practice of abdominal acupuncture and cheek acupuncture, which results in instant relief; the treatment is painless, relaxing and enjoyable, and is especially suitable for the fear/phobia of needles.
+            </p>
+          </section>
+        </div>
+
+       
+      </div>
+      <!-- This is for the map section-->
+      <div class="map-container">
+        <iframe  
+          style="border:0;" 
+          loading="lazy" 
+          allowfullscreen 
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1187.8984085998554!2d-2.736600260945351!3d53.454218240242305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487b1b79aa92f803%3A0x9138531bb6ae6ca9!2sSt%20Helens%20Acupuncture%20%26%20Chinese%20Medical%20Clinic!5e0!3m2!1sen!2suk!4v1742483796614!5m2!1sen!2suk">
+        </iframe>
+      </div>
+      
+      
+      <!-- Call to Action Section -->
+      <section class="call-to-action">
+        <h2>Ready to make an appointment?</h2>
+        <button 
+          class="shrink-border" 
+          id="call-to-action-button"
+          onclick="callToAction()"
+        >Book Now!</button>
+      </section>
+    </main>
+
+
+    <footer class="footer-content">
+
+      <p> &copy; 2025 St Helens Chinese Medical Center. All rights reserved. </p>
+      
+      <ul class="footer-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="therapies.html">Therapies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+
+      <p class="footer-social">
+        <a href="https://www.facebook.com"><i class="fa fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-brands fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i class="fa fa-brands fa-twitter"></i></a>
+      </p>
+
+    </footer>
+    <script>
+      function callToAction() {
+        var targetButton = document.getElementById("call-to-action-button");
+
+        targetButton.textContent = "derp";
+        targetButton.style.width = "800px";
+      }
+
+      function deleteButton() {
+        var targetButton = document.getElementById("call-to-action-button");
+
+        targetButton.parentNode.removeChild(targetButton);
+      }
+    </script>
+  </body>
+</html>

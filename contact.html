@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>St Helens Acupuncture and Chinese Medical Clinic</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Chinese Acupuncture Page">
+    <meta name="keywords" content="Chinese, Acupuncture, needles, cupping, massage, appointment">
+    <meta name="author" content="David Xu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+    rel="stylesheet"
+    >
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
+    <script>
+      /*
+      window.onload = function() {
+        document.getElementById("change").innerHTML = "";
+      };
+      */
+    </script>
+  </head>
+  <body>
+    <!-- This is the navigation system-->
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="therapies.html">Therapies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="selectedPage"><a href="contact.html">Contacts</a></li>
+      </ul>
+    </nav>
+    
+    <!-- This is the Header Section-->
+    <div class="header">
+      <img class="yinYangImg" src="images/yin-and-yang.png">
+      <h1>St Helens Acupuncture & Chinese Medical Clinic</h1>
+      <button class="shrink-border" onclick="location.href='qi_gong.html'">Learn more about Medical QiGong</button>
+    </div>
+
+    <!--This is the contact form section-->
+    <main>
+      <h2 id="change">Contact Us</h2>
+
+      <section class="contact-section">
+        <div class="contact-box">
+          <h2>Send us a message:</h2>
+          <form action="form-handler.php" method="post">
+            <br>
+            <label for="firstname">First Name</label><br>
+            <input 
+              type="text" 
+              id="firstname" 
+              name="firstname" 
+              value="David" 
+            /><br>
+            <label for="surname">Family Name</label><br>
+            <input 
+              type="text"
+              id="surname" 
+              name="surname"
+              value="Xu" 
+            /><br>
+
+            <p>What is your query?</p>
+
+            <input 
+              type="radio"
+              id="option1" 
+              name="query"
+              value="Book an appointment"
+            />
+            <label for="option1">Book an appointment</label><br />
+            
+            <input 
+              type="radio"
+              id="option2" 
+              name="query"
+              value="Order herbs"
+            />
+            <label for="option2">Order herbs</label><br />
+
+            <input 
+              type="radio"
+              id="option3" 
+              name="query"
+              value="Make a consultation"
+            />
+            <label for="option3">Make a consultation</label><br />
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="footer-content">
+
+      <p> &copy; 2025 St Helens Chinese Medical Center. All rights reserved. </p>
+      
+      <ul class="footer-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="therapies.html">Therapies</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+
+      <p class="footer-social">
+        <a href="https://www.facebook.com"><i class="fa fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com"><i class="fa fa-brands fa-instagram"></i></a>
+        <a href="https://www.twitter.com"><i class="fa fa-brands fa-twitter"></i></a>
+      </p>
+
+    </footer>
+  </body>
+</html>
