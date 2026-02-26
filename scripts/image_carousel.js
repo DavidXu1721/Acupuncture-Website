@@ -5,6 +5,10 @@ const prevButton = document.querySelector('.carousel-arrow-button__left');
 const dotsNav = document.querySelector('.carousel-nav');
 const dots = Array.from(dotsNav.children);
 
+const AUTOSCROLL_INTERVAL = 1;
+
+let automatedCarouselScroll;
+
 const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + 'px';
 }
@@ -15,6 +19,8 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
         // I would have liked to add looping, but I also want to make it possible to traverse multiple slides quickly, it'll honestly be too complicated
         return;
     }
+
+    clearTimeout(automatedCarouselScroll);
 
     // find out how much the track needs to move
     const amountToMove = targetSlide.style.left;
@@ -38,10 +44,21 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 
     if (targetIndex === 0) {
         prevButton.classList.add('is-hidden');
+
     } else if (targetIndex === slides.length - 1) {
         nextButton.classList.add('is-hidden');
     } 
 
+    // prepare the function for the automated scrolling of the carousel
+    let newCurrentSlide = track.querySelector('.current-slide');
+    let newNextSlide = newCurrentSlide.nextElementSibling;
+
+    if (!newNextSlide) {
+        newNextSlide = track.firstElementChild;
+        console.log(newNextSlide)
+    }
+
+    automatedCarouselScroll = setTimeout(moveToSlide, AUTOSCROLL_INTERVAL, track, newCurrentSlide, newNextSlide);
 }
 
 let slideWidth
@@ -96,3 +113,14 @@ dotsNav.addEventListener('click', e => {
 
 // this is just to do the setup for the arrow buttons when you first load the website
 moveToSlide(track, slides[0], slides[0])
+
+// initiate automated scrolling of the carousel
+
+let newCurrentSlide = track.querySelector('.current-slide');
+let newNextSlide = newCurrentSlide.nextElementSibling;
+
+if (!newNextSlide) {
+    newNextSlide = track.firstElementChild;
+}
+
+automatedCarouselScroll = setTimeout(moveToSlide, 3000, track, newCurrentSlide, newNextSlide);
